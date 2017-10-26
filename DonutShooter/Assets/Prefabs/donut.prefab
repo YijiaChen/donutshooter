@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212747031365144950}
   - component: {fileID: 61453937208746214}
   - component: {fileID: 50637642724606850}
+  - component: {fileID: 114581133950171568}
   m_Layer: 0
   m_Name: donut
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,19 +50,19 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897496874754956}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.040000003
+  m_Mass: 0.04
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61453937208746214
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -87,6 +88,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &114581133950171568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897496874754956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9eacf203279eb408fe1b1a5f44c7bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletspeed: 15
+  lifespan: 3
 --- !u!212 &212747031365144950
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,7 +132,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5d2796cc83b4c8f429b4bdb66602250f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

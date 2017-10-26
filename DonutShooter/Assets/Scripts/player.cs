@@ -7,6 +7,8 @@ public class player : MonoBehaviour {
     public float movespeedy;
     private Rigidbody2D rb;
     public GameObject donut;
+    public int shootrate = 1;
+    private int shoottimer;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,7 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        shoottimer += 1;
         //movement
         if (Input.GetKey(KeyCode.W))
         {
@@ -39,8 +42,13 @@ public class player : MonoBehaviour {
         // shooting donut
         if (Input.GetKey(KeyCode.Space))
         {
-            Vector3 newPos = new Vector3(rb.position.x, rb.position.y, 0);
-            Instantiate(donut,newPos,Quaternion.identity);
+            //bruhhhhhhhhhh
+            if (shoottimer%shootrate==0)
+            {
+                Vector3 newPos = new Vector3(rb.position.x, rb.position.y, 0);
+                Instantiate(donut, newPos, Quaternion.identity);
+                Debug.Log("BRUHHHHHHHHHHHHH");
+            }
         }
 
 		
