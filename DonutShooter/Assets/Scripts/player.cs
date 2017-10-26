@@ -6,6 +6,8 @@ public class player : MonoBehaviour {
     public float movespeedx;
     public float movespeedy;
     private Rigidbody2D rb;
+    public GameObject donut;
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>(); 
@@ -13,6 +15,7 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //movement
         if (Input.GetKey(KeyCode.W))
         {
             rb.velocity = new Vector2(0,movespeedy);
@@ -33,6 +36,13 @@ public class player : MonoBehaviour {
         {
             rb.velocity = new Vector2(0, 0);
         }
+        // shooting donut
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Vector3 newPos = new Vector3(rb.position.x, rb.position.y, 0);
+            Instantiate(donut,newPos,Quaternion.identity);
+        }
+
 		
 	}
 }
