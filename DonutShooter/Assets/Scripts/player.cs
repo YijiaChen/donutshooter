@@ -7,6 +7,9 @@ public class player : MonoBehaviour {
     public float movespeedy;
     private Rigidbody2D rb;
     public GameObject donut;
+    public GameObject donut2;
+    public GameObject donut3;
+    private int donutType = 1;
     public int shootrate = 1;
     private int shoottimer;
     public int donutnum;
@@ -21,7 +24,14 @@ public class player : MonoBehaviour {
     {
         if (collision.collider.tag == "reload")
         {
+            donutType = 1;
             donutnum = refill; 
+        }
+        if (collision.collider.tag == "reload2")
+        {
+            donutType = 2;
+            donutnum = refill;
+
         }
     }
 
@@ -56,10 +66,20 @@ public class player : MonoBehaviour {
             //the greater the number, the slower of shoot rate;kinda anti-intuitive...
             if (shoottimer%shootrate==0)
             {
-                Vector3 newPos = new Vector3(rb.position.x+1.0f, rb.position.y, 0);
-                Instantiate(donut, newPos, Quaternion.identity);
-                donutnum -= 1;
-                shoottimer = 0;
+                if (donutType == 1)
+                {
+                    Vector3 newPos = new Vector3(rb.position.x+1.0f, rb.position.y, 0);
+                    Instantiate(donut, newPos, Quaternion.identity);
+                    donutnum -= 1;
+                    shoottimer = 0;
+                }
+                if (donutType == 2)
+                {
+                    Vector3 newPos = new Vector3(rb.position.x + 1.0f, rb.position.y, 0);
+                    Instantiate(donut2, newPos, Quaternion.identity);
+                    donutnum -= 1;
+                    shoottimer = 0;
+                }
             }
         }
 

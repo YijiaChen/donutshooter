@@ -7,23 +7,35 @@ public class zombie : MonoBehaviour {
     public TextMesh hittext;
     public float movingSpeed;
     GameObject score;
+    Collider2D m_collider;
+    bool hitbyright;
 
 	// Use this for initialization
 	void Start () {
         score = GameObject.Find("scorer");
+        m_collider = GetComponent<Collider2D>();
+        hitbyright = false;
 
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.position.x > -6.5f)
+        if (transform.position.x > -6.5f && hitbyright==false)
         {
           transform.Translate(-movingSpeed, 0, Time.deltaTime);
         }
         if (transform.position.x <= -6.5f)
         {   // game should be over by now 
             transform.Translate(0, 0, Time.deltaTime);
+        }
+        if (hitbyright == true)
+        {
+            transform.Translate(0.05f, 0, Time.deltaTime);
+            if (transform.position.x >= 20)
+            {
+                Destroy(this.gameObject);
+            }
         }
         hittext.text = hitpoints.ToString();
         if (hitpoints <= 0)
@@ -40,11 +52,19 @@ public class zombie : MonoBehaviour {
             hitpoints -= 1;
             Debug.Log("hit");
         }
+        if (collision.collider.tag == "bullet2")
+        {   //get the right donut, and turn back.
+            hitbyright = true;
+            m_collider.enabled = !m_collider.enabled;
+
+
+        }
         //when spawned, avoid overlap
         if (collision.collider.tag == "monster1")
         {
             Destroy(this.gameObject);
            
         }
+    
     }
 }

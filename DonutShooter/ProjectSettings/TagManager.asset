@@ -8,6 +8,9 @@ TagManager:
   - monster1
   - reload
   - wall
+  - bullet2
+  - monster2
+  - reload2
   layers:
   - Default
   - TransparentFX
