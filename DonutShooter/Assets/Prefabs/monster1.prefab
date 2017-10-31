@@ -119,13 +119,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!58 &58032166905507678
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 5
   hittext: {fileID: 102573841302180034}
+  movingSpeed: 0.01
 --- !u!212 &212197623953385240
 SpriteRenderer:
   m_ObjectHideFlags: 1

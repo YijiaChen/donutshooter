@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletspeed: 15
-  lifespan: 3
+  lifespan: 2.1
 --- !u!212 &212747031365144950
 SpriteRenderer:
   m_ObjectHideFlags: 1

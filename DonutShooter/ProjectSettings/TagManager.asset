@@ -6,6 +6,8 @@ TagManager:
   tags:
   - bullet
   - monster1
+  - reload
+  - wall
   layers:
   - Default
   - TransparentFX

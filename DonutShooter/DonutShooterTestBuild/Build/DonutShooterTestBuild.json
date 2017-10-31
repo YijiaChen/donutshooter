@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "DonutShooterTestBuild.data.unityweb",
+"asmCodeUrl": "DonutShooterTestBuild.asm.code.unityweb",
+"asmMemoryUrl": "DonutShooterTestBuild.asm.memory.unityweb",
+"asmFrameworkUrl": "DonutShooterTestBuild.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

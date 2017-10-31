@@ -11,7 +11,6 @@ public class donut : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(bulletspeed, 0);
-
 	}
 	
 	// Update is called once per frame
