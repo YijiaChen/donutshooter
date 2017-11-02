@@ -33,6 +33,12 @@ public class player : MonoBehaviour {
             donutnum = refill;
 
         }
+        if (collision.collider.tag == "reload3")
+        {
+            donutType = 3;
+            donutnum = refill;
+
+        }
     }
 
     // Update is called once per frame
@@ -77,6 +83,13 @@ public class player : MonoBehaviour {
                 {
                     Vector3 newPos = new Vector3(rb.position.x + 1.0f, rb.position.y, 0);
                     Instantiate(donut2, newPos, Quaternion.identity);
+                    donutnum -= 1;
+                    shoottimer = 0;
+                }
+                if (donutType == 3)
+                {
+                    Vector3 newPos = new Vector3(rb.position.x + 1.0f, rb.position.y, 0);
+                    Instantiate(donut3, newPos, Quaternion.identity);
                     donutnum -= 1;
                     shoottimer = 0;
                 }

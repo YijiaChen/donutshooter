@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class donut : MonoBehaviour {
+public class donut2 : MonoBehaviour {
     private Rigidbody2D rb;
     public float bulletspeed;
     public float lifespan;
@@ -26,7 +26,7 @@ public class donut : MonoBehaviour {
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "monster1")
+        if (collision.collider.tag == "monster3")
         {
             Destroy(this.gameObject);
         }
@@ -37,7 +37,7 @@ public class donut : MonoBehaviour {
             m_collider.enabled = !m_collider.enabled;
         
         }
-        if (collision.collider.tag == "monster3")
+        if (collision.collider.tag == "monster1")
         {
             rb.velocity = new Vector2(-8, 5);
             rb.angularVelocity = 720; 

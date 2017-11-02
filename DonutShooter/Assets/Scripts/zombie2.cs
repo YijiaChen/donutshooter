@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class zombie : MonoBehaviour {
+public class zombie2 : MonoBehaviour {
     public int hitpoints;
     public TextMesh hittext;
     public float movingSpeed;
@@ -47,26 +47,26 @@ public class zombie : MonoBehaviour {
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "bullet")
+        if (collision.collider.tag == "bullet3")
         {
             //get the right donut, and turn back.
             hitbyright = true;
             m_collider.enabled = !m_collider.enabled;
         }
-        if (collision.collider.tag == "bullet2")
+        if (collision.collider.tag == "bullet")
         {   
           hitpoints -= 1;
           Debug.Log("hit");
 
         }
-        if (collision.collider.tag == "bullet3")
+        if (collision.collider.tag == "bullet2")
         {
             hitpoints -= 1;
             Debug.Log("hit");
 
         }
         //when spawned, avoid overlap
-        if (collision.collider.tag == "monster1")
+        if (collision.collider.tag == "monster3")
         {
             Destroy(this.gameObject);
            

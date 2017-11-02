@@ -83,11 +83,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\donut.cs" />
     <Compile Include="Assets\Scripts\donut_reload.cs" />
+    <Compile Include="Assets\Scripts\donut1.cs" />
+    <Compile Include="Assets\Scripts\donut2.cs" />
     <Compile Include="Assets\Scripts\game_manager.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
     <Compile Include="Assets\Scripts\score.cs" />
     <Compile Include="Assets\Scripts\zombie.cs" />
     <Compile Include="Assets\Scripts\zombie_spawner.cs" />
+    <Compile Include="Assets\Scripts\zombie1.cs" />
+    <Compile Include="Assets\Scripts\zombie2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

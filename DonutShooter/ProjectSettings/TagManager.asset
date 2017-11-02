@@ -11,6 +11,9 @@ TagManager:
   - bullet2
   - monster2
   - reload2
+  - monster3
+  - reload3
+  - bullet3
   layers:
   - Default
   - TransparentFX
