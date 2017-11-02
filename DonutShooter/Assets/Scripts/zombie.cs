@@ -49,14 +49,20 @@ public class zombie : MonoBehaviour {
     {
         if (collision.collider.tag == "bullet")
         {
-            hitpoints -= 1;
-            Debug.Log("hit");
-        }
-        if (collision.collider.tag == "bullet2")
-        {   //get the right donut, and turn back.
+            //get the right donut, and turn back.
             hitbyright = true;
             m_collider.enabled = !m_collider.enabled;
+        }
+        if (collision.collider.tag == "bullet2")
+        {   
+          hitpoints -= 1;
+          Debug.Log("hit");
 
+        }
+        if (collision.collider.tag == "bullet2")
+        {
+            hitpoints -= 1;
+            Debug.Log("hit");
 
         }
         //when spawned, avoid overlap

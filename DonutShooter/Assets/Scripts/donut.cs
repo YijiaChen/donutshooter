@@ -6,11 +6,13 @@ public class donut : MonoBehaviour {
     private Rigidbody2D rb;
     public float bulletspeed;
     public float lifespan;
+    Collider2D m_collider;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(bulletspeed, 0);
+        m_collider = GetComponent<Collider2D>();
 	}
 	
 	// Update is called once per frame
@@ -28,5 +30,18 @@ public class donut : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        if (collision.collider.tag == "monster2")
+        {
+            rb.velocity = new Vector2(-8, 5);
+            m_collider.enabled = !m_collider.enabled;
+        
+        }
+        if (collision.collider.tag == "monster3")
+        {
+            rb.velocity = new Vector2(-8, 5);
+            m_collider.enabled = !m_collider.enabled;
+
+        }
+
     }
 }
