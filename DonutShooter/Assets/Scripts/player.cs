@@ -6,6 +6,7 @@ public class player : MonoBehaviour {
     public float movespeedx;
     public float movespeedy;
     private Rigidbody2D rb;
+    private Rigidbody2D decoy;
     public GameObject donut;
     public GameObject donut2;
     public GameObject donut3;
@@ -18,7 +19,8 @@ public class player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
+        decoy = GameObject.Find("decoy").GetComponent<Rigidbody2D>();
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -49,22 +51,29 @@ public class player : MonoBehaviour {
         if (Input.GetKey(KeyCode.W))
         {
             rb.velocity = new Vector2(0,movespeedy);
+
+            //rb.velocity = Vector2.Lerp(decoy.velocity,new Vector2(1,2) , 0.2f);
         }
         else if (Input.GetKey(KeyCode.S))
         {
             rb.velocity = new Vector2(0, -movespeedy);
+            //rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(1, -2), 0.2f);
+
         }
         else if (Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector2(-movespeedx, 0);
+            //rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(2, 1), 0.2f);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(movespeedx, 0);
+            //rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(-2, 1), 0.2f);
         }
         else
         {
             rb.velocity = new Vector2(0, 0);
+           // rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(0, 0), 0.2f);
         }
         // shooting donut
         if (Input.GetKey(KeyCode.Space)&&(donutnum>0))

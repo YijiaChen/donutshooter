@@ -14,10 +14,6 @@ public class zombie_spawner : MonoBehaviour {
         //initial enemies 
         Vector3 newpos = new Vector3(spawnDis, Random.Range(spawnminy, spawnmaxy), 0);
         Instantiate(monster, newpos, Quaternion.identity);
-        Vector3 newpos2 = new Vector3(spawnDis, Random.Range(spawnminy, spawnmaxy), 0);
-        Instantiate(monster, newpos2, Quaternion.identity);
-        Vector3 newpos3 = new Vector3(spawnDis, Random.Range(spawnminy, spawnmaxy), 0);
-        Instantiate(monster, newpos3, Quaternion.identity);
     }
 	
 	// Update is called once per frame
