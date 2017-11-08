@@ -30,6 +30,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1906797969118534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4231718293330496}
+  - component: {fileID: 50892021345669300}
+  m_Layer: 0
+  m_Name: decoy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1955230494439186
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,6 +63,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4231718293330496
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906797969118534}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4551719807873728}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4377241817904936
 Transform:
   m_ObjectHideFlags: 1
@@ -54,11 +83,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1955230494439186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9, y: 5.8, z: -1}
-  m_LocalScale: {x: 0.65216833, y: 0.65216833, z: 0.65216833}
+  m_LocalPosition: {x: -0.9, y: 6.3738, z: -1}
+  m_LocalScale: {x: 0.65216833, y: 0.99455655, z: 0.65216833}
   m_Children: []
   m_Father: {fileID: 4551719807873728}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4551719807873728
 Transform:
@@ -70,6 +99,7 @@ Transform:
   m_LocalPosition: {x: -11.64, y: 0.23064, z: 0}
   m_LocalScale: {x: 0.5, y: 0.3, z: 0.5}
   m_Children:
+  - {fileID: 4231718293330496}
   - {fileID: 4377241817904936}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -87,7 +117,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 434da7976e14ab94196f5c4d54555c62, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,6 +156,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!50 &50892021345669300
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1906797969118534}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &61787379617393472
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -138,7 +188,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029307961, y: 0.3638296}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -149,7 +199,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8792527, y: 6.727659}
+  m_Size: {x: 2.966031, y: 6.727659}
   m_EdgeRadius: 0
 --- !u!102 &102848951889424622
 TextMesh:
@@ -168,7 +218,7 @@ TextMesh:
   m_FontSize: 30
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 12800000, guid: 434da7976e14ab94196f5c4d54555c62, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
@@ -183,13 +233,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb6853ff6af4a24b83097994353fd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeedx: 15
-  movespeedy: 15
+  movespeedx: 8
+  movespeedy: 10
   donut: {fileID: 1897496874754956, guid: c30a9cd4818630341abfdfb23bfb64e3, type: 2}
-  shootrate: 10
+  donut2: {fileID: 1897496874754956, guid: 4264ecf4f6bf0154d9498263bb7954f5, type: 2}
+  donut3: {fileID: 1897496874754956, guid: c047e715724f4ba45b7e01cb8000b2e2, type: 2}
+  shootrate: 30
   donutnum: 20
   refill: 20
   donutdisplay: {fileID: 102848951889424622}
+  do1: {fileID: 0}
+  do2: {fileID: 0}
+  do3: {fileID: 0}
 --- !u!212 &212827389893684324
 SpriteRenderer:
   m_ObjectHideFlags: 1

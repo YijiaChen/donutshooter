@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class zombie : MonoBehaviour {
+    float flip;
     public int hitpoints;
     public TextMesh hittext;
     public float movingSpeed;
@@ -53,6 +54,8 @@ public class zombie : MonoBehaviour {
             hitbyright = true;
             m_collider.enabled = !m_collider.enabled;
             score.SendMessage("returned");
+            flip = this.gameObject.transform.localScale.x;
+            this.gameObject.transform.localScale += new Vector3(-flip * 2, 0, 0);
         }
         if (collision.collider.tag == "bullet2")
         {   
@@ -72,6 +75,7 @@ public class zombie : MonoBehaviour {
             Destroy(this.gameObject);
            
         }
-    
+      
+
     }
 }

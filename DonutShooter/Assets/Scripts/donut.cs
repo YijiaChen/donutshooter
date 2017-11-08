@@ -13,7 +13,8 @@ public class donut : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(bulletspeed, 0);
         m_collider = GetComponent<Collider2D>();
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,7 +34,7 @@ public class donut : MonoBehaviour {
         if (collision.collider.tag == "monster2")
         {
             rb.velocity = new Vector2(-8, 5);
-            rb.angularVelocity = 720;
+            rb.angularVelocity = 720.0f;
             m_collider.enabled = !m_collider.enabled;
         
         }
@@ -44,6 +45,7 @@ public class donut : MonoBehaviour {
             m_collider.enabled = !m_collider.enabled;
 
         }
+       
 
     }
 }

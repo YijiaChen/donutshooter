@@ -6,7 +6,7 @@ public class player : MonoBehaviour {
     public float movespeedx;
     public float movespeedy;
     private Rigidbody2D rb;
-    private Rigidbody2D decoy;
+    private SpriteRenderer donutcate;
     public GameObject donut;
     public GameObject donut2;
     public GameObject donut3;
@@ -16,29 +16,36 @@ public class player : MonoBehaviour {
     public int donutnum;
     public int refill;
     public TextMesh donutdisplay;
+    [Header("indicator")]
+    public Sprite do1;
+    public Sprite do2;
+    public Sprite do3;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
-        decoy = GameObject.Find("decoy").GetComponent<Rigidbody2D>();
+        donutcate = GameObject.Find("indicator").GetComponent<SpriteRenderer>();
 	}
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "reload")
         {
             donutType = 1;
-            donutnum = refill; 
+            donutnum = refill;
+            donutcate.sprite = do1;
         }
         if (collision.collider.tag == "reload2")
         {
             donutType = 2;
             donutnum = refill;
+            donutcate.sprite = do2;
 
         }
         if (collision.collider.tag == "reload3")
         {
             donutType = 3;
             donutnum = refill;
+            donutcate.sprite = do3;
 
         }
     }
