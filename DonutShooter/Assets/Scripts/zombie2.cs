@@ -62,7 +62,7 @@ public class zombie2 : MonoBehaviour {
             score.SendMessage("returned");
             flip = this.gameObject.transform.localScale.x;
             this.gameObject.transform.localScale += new Vector3(-flip * 2, 0, 0);
-            Vector3 pos = new Vector3(transform.position.x, transform.position.y + 2.5f, 0);
+            Vector3 pos = new Vector3(transform.position.x, transform.position.y + 2.0f, 0);
             love1 = Instantiate(love, pos, Quaternion.identity);
             love1.transform.parent = this.transform;
 
