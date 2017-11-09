@@ -87,6 +87,8 @@
     <Compile Include="Assets\Scripts\donut2.cs" />
     <Compile Include="Assets\Scripts\game_manager.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
+    <Compile Include="Assets\Scripts\reloadpointbehave.cs" />
+    <Compile Include="Assets\Scripts\reloadspwan.cs" />
     <Compile Include="Assets\Scripts\score.cs" />
     <Compile Include="Assets\Scripts\zombie.cs" />
     <Compile Include="Assets\Scripts\zombie_spawner.cs" />

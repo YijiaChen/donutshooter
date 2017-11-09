@@ -7,6 +7,7 @@ public class zombie1 : MonoBehaviour {
     public int hitpoints;
     public TextMesh hittext;
     public float movingSpeed;
+    public GameObject blood;
     GameObject score;
     Collider2D m_collider;
     bool hitbyright;
@@ -41,6 +42,7 @@ public class zombie1 : MonoBehaviour {
         hittext.text = hitpoints.ToString();
         if (hitpoints <= 0)
         {
+            Instantiate(blood, transform.position, Quaternion.identity);
             score.SendMessage("killed");
             Destroy(this.gameObject);
         }

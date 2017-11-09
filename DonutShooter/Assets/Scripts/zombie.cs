@@ -10,6 +10,7 @@ public class zombie : MonoBehaviour {
     GameObject score;
     Collider2D m_collider;
     bool hitbyright;
+    public GameObject blood;
 
 	// Use this for initialization
 	void Start () {
@@ -41,8 +42,10 @@ public class zombie : MonoBehaviour {
         hittext.text = hitpoints.ToString();
         if (hitpoints <= 0)
         {
+            Instantiate(blood, transform.position, Quaternion.identity);
             score.SendMessage("killed");
             Destroy(this.gameObject);
+           
         }
 		
 	}
