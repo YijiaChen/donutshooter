@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1299148039143814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.229998, y: -0.43954188, z: 0}
+  m_LocalPosition: {x: -0.04, y: -0.43954188, z: 0}
   m_LocalScale: {x: 1.612139, y: 1.612139, z: 1.612139}
   m_Children:
   - {fileID: 4243268216934516}
@@ -177,6 +177,7 @@ MonoBehaviour:
   hittext: {fileID: 102573841302180034}
   movingSpeed: 0.01
   blood: {fileID: 1164239357549924, guid: 317f0ed83ff8ec944822ece3fadda158, type: 2}
+  love: {fileID: 1253376498759346, guid: 92807ce6ca9fed343befee998ca3d09b, type: 2}
 --- !u!212 &212197623953385240
 SpriteRenderer:
   m_ObjectHideFlags: 1

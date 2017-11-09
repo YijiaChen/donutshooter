@@ -11,10 +11,14 @@ public class zombie : MonoBehaviour {
     Collider2D m_collider;
     bool hitbyright;
     public GameObject blood;
+    public GameObject love;
+    GameObject love1;
+
 
 	// Use this for initialization
 	void Start () {
         score = GameObject.Find("scorer");
+ 
         m_collider = GetComponent<Collider2D>();
         hitbyright = false;
 
@@ -57,8 +61,14 @@ public class zombie : MonoBehaviour {
             hitbyright = true;
             m_collider.enabled = !m_collider.enabled;
             score.SendMessage("returned");
+           
             flip = this.gameObject.transform.localScale.x;
             this.gameObject.transform.localScale += new Vector3(-flip * 2, 0, 0);
+            Vector3 pos = new Vector3(transform.position.x, transform.position.y+2.5f, 0);
+            love1 = Instantiate(love, pos, Quaternion.identity);
+            love1.transform.parent = this.transform;
+
+            
         }
         if (collision.collider.tag == "bullet2")
         {   

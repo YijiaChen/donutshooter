@@ -9,6 +9,8 @@ public class zombie1 : MonoBehaviour {
     public float movingSpeed;
     public GameObject blood;
     GameObject score;
+    public GameObject love;
+    GameObject love1;
     Collider2D m_collider;
     bool hitbyright;
 
@@ -17,6 +19,7 @@ public class zombie1 : MonoBehaviour {
         score = GameObject.Find("scorer");
         m_collider = GetComponent<Collider2D>();
         hitbyright = false;
+  
 
 		
 	}
@@ -53,11 +56,15 @@ public class zombie1 : MonoBehaviour {
         if (collision.collider.tag == "bullet2")
         {
             //get the right donut, and turn back.
+         
             hitbyright = true;
             m_collider.enabled = !m_collider.enabled;
             flip = this.gameObject.transform.localScale.x;
             this.gameObject.transform.localScale += new Vector3(-flip*2, 0, 0);
             score.SendMessage("returned");
+            Vector3 pos = new Vector3(transform.position.x, transform.position.y + 2.5f, 0);
+            love1 = Instantiate(love, pos, Quaternion.identity);
+            love1.transform.parent = this.transform;
         }
         if (collision.collider.tag == "bullet")
         {   
