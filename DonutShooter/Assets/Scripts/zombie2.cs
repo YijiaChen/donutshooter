@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class zombie2 : MonoBehaviour {
     float flip;
     public int hitpoints;
@@ -18,6 +19,7 @@ public class zombie2 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         score = GameObject.Find("scorer");
+        DontDestroyOnLoad(score);
         m_collider = GetComponent<Collider2D>();
         hitbyright = false;
        
@@ -33,7 +35,10 @@ public class zombie2 : MonoBehaviour {
         }
         if (transform.position.x <= -6.5f)
         {   // game should be over by now 
+
             transform.Translate(0, 0, Time.deltaTime);
+            Application.LoadLevel("ending");
+
         }
         if (hitbyright == true)
         {

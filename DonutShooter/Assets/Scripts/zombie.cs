@@ -34,6 +34,7 @@ public class zombie : MonoBehaviour {
         if (transform.position.x <= -6.5f)
         {   // game should be over by now 
             transform.Translate(0, 0, Time.deltaTime);
+            Application.LoadLevel("ending");
         }
         if (hitbyright == true)
         {
