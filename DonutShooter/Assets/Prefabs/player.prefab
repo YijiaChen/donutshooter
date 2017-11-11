@@ -125,8 +125,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1871543523666218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.43, y: 2.0675, z: -0.15549}
-  m_LocalScale: {x: 0.5367731, y: 0.5311246, z: 0.50570655}
+  m_LocalPosition: {x: -10.425, y: 2.114, z: -0.17764}
+  m_LocalScale: {x: 0.42719507, y: 0.42269963, z: 0.4024705}
   m_Children:
   - {fileID: 4377241817904936}
   - {fileID: 4231718293330496}
@@ -250,7 +250,7 @@ MonoBehaviour:
   donut3: {fileID: 1897496874754956, guid: c047e715724f4ba45b7e01cb8000b2e2, type: 2}
   shootrate: 30
   donutnum: 0
-  refill: 10
+  refill: 20
   donutdisplay: {fileID: 102848951889424622}
   do1: {fileID: 21300000, guid: 7fa7e8b75a0df034db2f37c95423730d, type: 3}
   do2: {fileID: 21300000, guid: 12bc25f93a9ef7a44b4f6f01620bb20d, type: 3}

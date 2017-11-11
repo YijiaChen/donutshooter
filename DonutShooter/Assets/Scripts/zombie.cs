@@ -18,7 +18,6 @@ public class zombie : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         score = GameObject.Find("scorer");
- 
         m_collider = GetComponent<Collider2D>();
         hitbyright = false;
 
@@ -49,6 +48,7 @@ public class zombie : MonoBehaviour {
         {
             Instantiate(blood, transform.position, Quaternion.identity);
             score.SendMessage("killed");
+            score.SendMessage("ded");
             Destroy(this.gameObject);
            
         }
@@ -62,7 +62,7 @@ public class zombie : MonoBehaviour {
             hitbyright = true;
             m_collider.enabled = !m_collider.enabled;
             score.SendMessage("returned");
-           
+            score.SendMessage("getheart");
             flip = this.gameObject.transform.localScale.x;
             this.gameObject.transform.localScale += new Vector3(-flip * 2, 0, 0);
             Vector3 pos = new Vector3(transform.position.x, transform.position.y+2.5f, 0);
@@ -72,21 +72,23 @@ public class zombie : MonoBehaviour {
             
         }
         if (collision.collider.tag == "bullet2")
-        {   
-          hitpoints -= 1;
-          Debug.Log("hit");
+        {
+           hitpoints -= 1;
+          score.SendMessage("hit");
 
         }
         if (collision.collider.tag == "bullet3")
         {
             hitpoints -= 1;
-            Debug.Log("hit");
+       
+            score.SendMessage("hit");
 
         }
         //when spawned, avoid overlap
         if (collision.collider.tag == "monster1")
         {
             Destroy(this.gameObject);
+
            
         }
       

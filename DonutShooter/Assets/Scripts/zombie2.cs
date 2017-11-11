@@ -53,6 +53,7 @@ public class zombie2 : MonoBehaviour {
         {
             Instantiate(blood, transform.position, Quaternion.identity);
             score.SendMessage("killed");
+            score.SendMessage("ded");
             Destroy(this.gameObject);
         }
 		
@@ -65,6 +66,7 @@ public class zombie2 : MonoBehaviour {
             hitbyright = true;
             m_collider.enabled = !m_collider.enabled;
             score.SendMessage("returned");
+            score.SendMessage("getheart");
             flip = this.gameObject.transform.localScale.x;
             this.gameObject.transform.localScale += new Vector3(-flip * 2, 0, 0);
             Vector3 pos = new Vector3(transform.position.x, transform.position.y + 2.0f, 0);
@@ -76,12 +78,14 @@ public class zombie2 : MonoBehaviour {
         {   
           hitpoints -= 1;
           Debug.Log("hit");
+            score.SendMessage("hit");
 
         }
         if (collision.collider.tag == "bullet2")
         {
             hitpoints -= 1;
             Debug.Log("hit");
+            score.SendMessage("hit");
 
         }
         //when spawned, avoid overlap

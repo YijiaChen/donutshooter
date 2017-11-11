@@ -6,6 +6,11 @@ public class reloadspwan : MonoBehaviour {
     public int spawnRate;
     private float spawnTimer;
     private int chancer;
+    private int chancer2;
+    private int red;
+    private int green;
+    private int blue;
+    public GameObject reload0;
     public GameObject reload1;
     public GameObject reload2;
     public GameObject reload3;
@@ -21,22 +26,33 @@ public class reloadspwan : MonoBehaviour {
         spawnTimer += 1;
         if (spawnTimer % spawnRate == 0)
         {
-            chancer = Random.Range(0, 301);
-            if (chancer <= 100)
+            chancer = Random.Range(0, 3);
+            if (chancer < 1 )
             {
                 Instantiate(reload1, transform.position, Quaternion.identity);
+                red += 1;
+                green = 0;
+                blue = 0;
+                
 
             }
-            if (chancer <= 200 && chancer > 100)
+            if (chancer < 2 && chancer >= 1)
             {
                 Instantiate(reload2, transform.position, Quaternion.identity);
+                green += 1;
+                red = 0;
+                blue = 0;
 
             }
-            if (chancer<=300 && chancer > 200)
+            if (chancer<3 && chancer >= 2)
             {
                 Instantiate(reload3, transform.position, Quaternion.identity);
+                blue += 1;
+                red = 0;
+                green = 0;
 
             }
+          
         }
 
         

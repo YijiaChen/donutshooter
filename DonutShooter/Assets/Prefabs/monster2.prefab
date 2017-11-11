@@ -205,9 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39f553ada3faa44b9b3131ee749cc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 5
+  hitpoints: 3
   hittext: {fileID: 102573841302180034}
-  movingSpeed: 0.02
+  movingSpeed: 0.025
   blood: {fileID: 1164239357549924, guid: 317f0ed83ff8ec944822ece3fadda158, type: 2}
   love: {fileID: 1253376498759346, guid: 92807ce6ca9fed343befee998ca3d09b, type: 2}
 --- !u!212 &212197623953385240

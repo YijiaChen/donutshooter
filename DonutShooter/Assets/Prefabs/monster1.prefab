@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 8
   hittext: {fileID: 102573841302180034}
-  movingSpeed: 0.02
+  movingSpeed: 0.015
   blood: {fileID: 1164239357549924, guid: 317f0ed83ff8ec944822ece3fadda158, type: 2}
   love: {fileID: 1253376498759346, guid: 92807ce6ca9fed343befee998ca3d09b, type: 2}
 --- !u!212 &212197623953385240

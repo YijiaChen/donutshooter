@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class player : MonoBehaviour {
+    private GameObject score;
     public float movespeedx;
     public float movespeedy;
     private Rigidbody2D rb;
@@ -23,6 +24,7 @@ public class player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        score = GameObject.Find("scorer");
         rb = GetComponent<Rigidbody2D>();
         donutcate = GameObject.Find("indicator").GetComponent<SpriteRenderer>();
 	}
@@ -33,12 +35,14 @@ public class player : MonoBehaviour {
             donutType = 1;
             donutnum = refill;
             donutcate.sprite = do1;
+            score.SendMessage("reload");
         }
         if (collision.collider.tag == "reload2")
         {
             donutType = 2;
             donutnum = refill;
             donutcate.sprite = do2;
+            score.SendMessage("reload");
 
         }
         if (collision.collider.tag == "reload3")
@@ -46,6 +50,7 @@ public class player : MonoBehaviour {
             donutType = 3;
             donutnum = refill;
             donutcate.sprite = do3;
+            score.SendMessage("reload");
 
         }
     }
@@ -88,6 +93,7 @@ public class player : MonoBehaviour {
             //the greater the number, the slower of shoot rate;kinda anti-intuitive...
             if (shoottimer%shootrate==0)
             {
+                score.SendMessage("shoot");
                 if (donutType == 1)
                 {
                     Vector3 newPos = new Vector3(rb.position.x+1.0f, rb.position.y, 0);
