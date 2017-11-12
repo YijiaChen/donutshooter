@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\donut2.cs" />
     <Compile Include="Assets\Scripts\endingscore.cs" />
     <Compile Include="Assets\Scripts\game_manager.cs" />
+    <Compile Include="Assets\Scripts\gamestart.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
     <Compile Include="Assets\Scripts\reloadpointbehave.cs" />
     <Compile Include="Assets\Scripts\reloadspwan.cs" />
