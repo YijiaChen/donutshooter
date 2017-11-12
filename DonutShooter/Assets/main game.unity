@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.43529415, g: 0.47450984, b: 0.50980395, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -193,7 +193,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 26512714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.69, y: 1.6, z: -10}
+  m_LocalPosition: {x: -0.69, y: 1.2, z: -10}
   m_LocalScale: {x: 1.0681207, y: 1.0681207, z: 1.0681207}
   m_Children: []
   m_Father: {fileID: 0}
@@ -290,8 +290,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 90323145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.411, y: 0.785, z: 0}
-  m_LocalScale: {x: 1.7275655, y: 1.9358253, z: 2.0189216}
+  m_LocalPosition: {x: 9.411, y: 0.698, z: 0}
+  m_LocalScale: {x: 1.7275655, y: 1.9575963, z: 2.0189216}
   m_Children: []
   m_Father: {fileID: 1457709649}
   m_RootOrder: 4
@@ -1858,8 +1858,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1197912817}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.77, y: -6.77, z: 0}
-  m_LocalScale: {x: 1.3250022, y: 2.6166742, z: 2.0189216}
+  m_LocalPosition: {x: -0.77, y: -6.856, z: 0}
+  m_LocalScale: {x: 1.6728119, y: 2.6166742, z: 2.0189216}
   m_Children: []
   m_Father: {fileID: 1457709649}
   m_RootOrder: 8

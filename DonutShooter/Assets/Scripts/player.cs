@@ -64,28 +64,23 @@ public class player : MonoBehaviour {
         {
             rb.velocity = new Vector2(0,movespeedy);
 
-            //rb.velocity = Vector2.Lerp(decoy.velocity,new Vector2(1,2) , 0.2f);
         }
         else if (Input.GetKey(KeyCode.S))
         {
             rb.velocity = new Vector2(0, -movespeedy);
-            //rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(1, -2), 0.2f);
 
         }
         else if (Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector2(-movespeedx, 0);
-            //rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(2, 1), 0.2f);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(movespeedx, 0);
-            //rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(-2, 1), 0.2f);
         }
         else
         {
             rb.velocity = new Vector2(0, 0);
-           // rb.velocity = Vector2.Lerp(decoy.velocity, new Vector2(0, 0), 0.2f);
         }
         // shooting donut
         if (Input.GetKey(KeyCode.Space)&&(donutnum>0))

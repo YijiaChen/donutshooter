@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour {
     public AudioClip dedSound;
     public AudioClip reloadSound;
 
-	// Use this for initialization
+	// Audio manager, all audio are in here.
 	void Start () {
         audi = gameObject.GetComponent<AudioSource>();
 
